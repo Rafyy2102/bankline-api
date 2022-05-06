@@ -23,6 +23,14 @@ public class Movimentacao {
 	@Column(name = "id_conta")
 	private Integer idConta;
 	
+	public Integer getIdConta() {
+		return idConta;
+	}
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
+	}
+	
+	
 	public Integer getId() {
 		return id;
 	}
