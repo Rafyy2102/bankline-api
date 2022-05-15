@@ -7,7 +7,6 @@ import com.dio.santander.bankline.api.dto.MovimentacaoDto;
 import com.dio.santander.bankline.api.model.*;
 import com.dio.santander.bankline.api.repository.*;
 import com.dio.santander.bankline.api.service.*;
-
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name="Movimentações")
@@ -23,6 +22,11 @@ public class MovimentacaoController {
 	
 	@GetMapping
 	public List<Movimentacao>findAll(){return movimentacaoRepository.findAll();}
+	
+	@GetMapping("/{idConta}")
+	public List<Movimentacao>findAll(@PathVariable("idConta") Integer idConta){
+		return movimentacaoRepository.findByIdConta(idConta);
+	}
 	
 	@PostMapping
 	public void save(@RequestBody MovimentacaoDto movimentacao) {

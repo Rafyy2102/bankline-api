@@ -7,7 +7,6 @@ import com.dio.santander.bankline.api.dto.CorrentistaDto;
 import com.dio.santander.bankline.api.model.Correntista;
 import com.dio.santander.bankline.api.repository.CorrentistaRepository;
 import com.dio.santander.bankline.api.service.CorrentistaService;
-
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Correntistas")
